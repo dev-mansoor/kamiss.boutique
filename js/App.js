@@ -99,7 +99,7 @@ function getNameFrom(image)
 function LoadPic()
 { 
   fetch("load-pic.php",{
-    method:"Get"
+    method:"POST"
     
   })
   .then(response=>response.json())
