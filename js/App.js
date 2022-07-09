@@ -98,13 +98,16 @@ function getNameFrom(image)
 }
 function LoadPic()
 { 
-  fetch("load-pic.php")
-  .then(response=>response.json())
-  .then(data=>{
-    // let result = JSON.parse(data);
-    console.log(data);
+  fetch("load-pic.php",{
+    method:"Get"
     
-    // console.log(Object.keys(data).length);
+  })
+  .then(response=>response.json())
+  .then((data)=>{
+    // data = data.trim(); // remove the unwanted whitespace
+    // const result = JSON.parse(data);
+    console.log(data);
+
     document.getElementById("collection_data").innerHTML="";
     const key_length = Object.keys(data).length;
     const key_names = Object.keys(data);
@@ -237,6 +240,5 @@ function LoadPic()
    
   })
 }
-
 
 LoadPic();

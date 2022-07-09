@@ -204,7 +204,6 @@ function getImages()
 
 // fclose($file);
     
-
 echo json_encode(getImages());
 
 ?>
