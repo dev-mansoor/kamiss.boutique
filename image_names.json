@@ -1,0 +1,73 @@
+{
+    "afghani": {
+        "1": {
+            "image_name": "afghani-guchi-1-s(1225)-m(3)-l(2)-xxl(3).jpeg,afghani-guchi-2.jpg,afghani-guchi-3.jpg,afghani-guchi-4.png,afghani-guchi-5.png,afghani-guchi-6.jpg",
+            "size": "S,M,L,XXL",
+            "S": "1225",
+            "M": "3",
+            "L": "2",
+            "XL": "",
+            "XXL": "3"
+        },
+        "2": {
+            "image_name": "afghani-saada-1-s(2)-m(1)-l(4)-xl(2)-xxl(1).jpg,afghani-saada-2.png,afghani-saada-3.jpg",
+            "size": "S,M,L,XL,XXL",
+            "S": "2",
+            "M": "1",
+            "L": "4",
+            "XL": "2",
+            "XXL": "1"
+        }
+    },
+    "new": {
+        "1": {
+            "image_name": "new-a-1-s(2)-m(5)-l(4).jpg,new-a-2.jpg",
+            "size": "S,M,L",
+            "S": "2",
+            "M": "5",
+            "L": "4",
+            "XL": "",
+            "XXL": ""
+        }
+    },
+    "punjabi": {
+        "1": {
+            "image_name": "punjabi-hindi-1-s(5)-m(3)-l(2)-xl(4)-xxl(3).jpeg,punjabi-hindi-2.jpg,punjabi-hindi-3.png",
+            "size": "S,M,L,XL,XXL",
+            "S": "5",
+            "M": "3",
+            "L": "2",
+            "XL": "4",
+            "XXL": "3"
+        },
+        "2": {
+            "image_name": "punjabi-lahori-1-s(5)-m(3)-l(2)-xxl(3).jpg",
+            "size": "S,M,L,XXL",
+            "S": "5",
+            "M": "3",
+            "L": "5",
+            "XL": "",
+            "XXL": "3"
+        },
+        "3": {
+            "image_name": "punjabi-pakistani-1-s(2)-m(5)-l(5)-xxl(4).jpeg",
+            "size": "S,M,L,XXL",
+            "S": "2",
+            "M": "5",
+            "L": "5",
+            "XL": "",
+            "XXL": "4"
+        }
+    },
+    "shoes": {
+        "1": {
+            "image_name": "shoes-punjabi-1.png,shoes-punjabi-2.png",
+            "size": "",
+            "S": "",
+            "M": "",
+            "L": "",
+            "XL": "",
+            "XXL": ""
+        }
+    }
+}
