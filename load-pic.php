@@ -70,9 +70,10 @@ function getImages()
     $value = substr($data[0],$int_val,$index-$int_val);
     $first = $value;
 
-    $value_push = "";
+    $image_name = "";
     $len=0;
     $j = 0;
+    $image_id= 0;
     $image_names = array();
     $title_names = array();
 
@@ -101,24 +102,27 @@ function getImages()
         {   
            if($first==$value)
             { 
-               if($value_push=="")
+               if($image_name=="")
                {
-                   $value_push = $data[$i];
+                   $image_name = $data[$i];
                }
                else
                {
-                   $value_push =$value_push.",".$data[$i];
+                   $image_name =$image_name.",".$data[$i];
                }
                $first = $value;
             }
             else
             {
-                $j +=1;
 
+                $image_id +=1;
+                $j +=1;
                 $size = (($s!="")?"S":"")."".(($m!="")?",M":"")."".(($l!="")?",L":"")."".(($xl!="")?",XL":"")."".(($xxl!="")?",XXL":"");  
+                
                 $image_names+=array(
                     $j => array(
-                        'image_name'=>$value_push,
+                        'image_id'=>$image_id,
+                        'image_name'=>$image_name,
                         'size'=>$size,
                         "S"=>$s,
                         "M"=>$m,
@@ -128,7 +132,7 @@ function getImages()
                         )
                 );
 
-                $value_push = $data[$i];
+                $image_name = $data[$i];
                 $first = $value;
 
                 $s = getSize($data[$i],"-s");
@@ -140,12 +144,14 @@ function getImages()
         }
         else
         {   
+            $image_id +=1;
             $j +=1;  
             $size = (($s!="")?"S":"")."".(($m!="")?",M":"")."".(($l!="")?",L":"")."".(($xl!="")?",XL":"")."".(($xxl!="")?",XXL":"");  
 
             $image_names+=array(
                 $j => array(
-                    'image_name'=>$value_push,
+                    'image_id'=>$image_id,
+                    'image_name'=>$image_name,
                     'size'=>$size,
                     "S"=>$s,
                     "M"=>$m,
@@ -159,7 +165,7 @@ function getImages()
                 $title_name =>  $image_names
             );
   
-            $value_push = $data[$i];
+            $image_name = $data[$i];
             $first = $value;
             $title_name = $title_value;
 
@@ -173,12 +179,15 @@ function getImages()
             $j = 0;
         }
         if(($len+1)==count($data))
-        {
+        {   
+            $image_id +=1;
             $j +=1;
             $size = (($s!="")?"S":"")."".(($m!="")?",M":"")."".(($l!="")?",L":"")."".(($xl!="")?",XL":"")."".(($xxl!="")?",XXL":""); 
+
             $image_names+=array(
                 $j => array(
-                    'image_name'=>$value_push,
+                    'image_id'=>$image_id,
+                    'image_name'=>$image_name,
                     'size'=>$size,
                     "S"=>$s,
                     "M"=>$m,
